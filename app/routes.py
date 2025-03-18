@@ -1,6 +1,7 @@
 from flask import request, jsonify
-from app.models import Transaction
 from database import db
+from app.models import Transaction
+
 
 def init_routes(app):
     @app.route('/transactions', methods=['POST'])
