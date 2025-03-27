@@ -1,12 +1,15 @@
 from flask import Flask
 from config import Config
 from database import db, init_db
-from models import User, Transaction
 
 app = Flask(__name__)
 app.config.from_object(Config)
 
 init_db(app)
+
+@app.route('/')
+def check():
+  return 'Hello world'
 
 with app.app_context():
   db.create_all()
