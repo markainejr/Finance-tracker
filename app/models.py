@@ -13,7 +13,7 @@ class Transaction(db.Model):
         return f'<Transaction {self.description}>'
 
 class User(db.Model):
-    __ tablename__ = "users"
+    __tablename__ = "users"
     id = db.Column(db.Integer, primary_key=True)
     username = db.Column(db.String, nullable=False, unique=True)
     password = db.Column(db.String, nullable=False)
